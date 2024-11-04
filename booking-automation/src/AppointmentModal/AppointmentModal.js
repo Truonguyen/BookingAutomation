@@ -51,7 +51,6 @@ const AppointmentModal = ({ selectedDate, onAddEvent, onClose }) => {
     };
 
     try {
-      console.log(appointmentDetails);
       await addDoc(collection(db, "appointments"), appointmentDetails);
       onAddEvent(appointmentDetails); // Pass details back to parent for local update
       onClose(); // Close modal

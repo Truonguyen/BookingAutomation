@@ -24,7 +24,6 @@ const AddCustomerModal = ({ open, onCustomerAdded, onClose }) => {
       onCustomerAdded(`Customer "${name}" added successfully.`);
       onClose();
     } catch (err) {
-      console.error("Error adding customer:", err);
       setError("Failed to add customer. Please try again.");
     }
   };
